@@ -1,0 +1,112 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+main{
+    
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.fundo-background{
+    width: 100%;
+    background-position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    object-fit: cover;
+    position: fixed;
+}
+
+
+.content{
+    /* background-color: aqua; */
+    position: absolute;
+    top: 0;
+    z-index: 50;
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+.banner{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+}
+
+.banner2{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 8000px;
+}
+
+.banner2 img{
+    width: 100%;
+    height: auto;
+}
+
+.b2config{
+    display: flex;
+    /* background-color: aqua; */
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.b2config p{
+    color: rgb(251, 255, 0);
+}
+
+.menu-botoes{
+    display: flex;
+    justify-content: center;
+}
+.menu-botoes P{
+    color: beige;
+}
+
+.menu-botoes button{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 150px;
+    background-color:rgba(255, 255, 255, 0);
+    border-color: cornsilk;
+    border: 55px;
+    border-radius: 3px;
+    width: 100%;
+}
+.menu-botoes img{
+    max-width: 150px;
+    max-height: 150px;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-fade .carousel-item {
+  transition: opacity 0.8s ease-in-out;
+}
+
