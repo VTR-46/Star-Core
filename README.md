@@ -9,13 +9,20 @@ A SWAPI fornece informações a respeito de cada filme, dos personagens, dos pla
 Use sua criatividade e os recursos fornecidos pelo HTML, CSS, JavaScript e  Bootstrap para a construção do site. São requisitos: 
  
 ●	Cada página deve conter cabeçalho, menu e rodapé. 
+
 ●	Use Bootstrap para permitir responsividade na página. 
+
 ●	Dedicar cada página do site a um conteúdo diferente (personagens, planetas, veículos...). 
+
 ●	Ao carregar uma página, deve ser exibida uma lista de todos os itens da página. Por exemplo, a página de personagens deve exibir uma lista de todos os personagens da franquia. Não apresente todas as informações dos personagens nessa lista.  
+
 ●	Use JavaScript e componentes do Bootstrap (como, por exemplo, o modal) para exibir as informações detalhadas de um item, ao ser clicado na lista. 
+
 ●	Disponibilize um campo de busca em cada página para que o usuário possa procurar itens pelo nome.  
+
  
 Para tornar o acesso aos dados mais eficiente e diminuir as consultas à API, use localStorage para armazenar o JSON temporariamente.  
+
    
  =======================================================================================================================================================================
  
@@ -30,10 +37,16 @@ SWAPI provides information about each film, the characters, planets, vehicles, s
 Use your creativity and the resources provided by HTML, CSS, JavaScript and Bootstrap to build the website. The requirements are:
 
 ● Each page must contain a header, menu and footer.
+
 ● Use Bootstrap to enable page responsiveness.
+
 ● Dedicate each page of the website to different content (characters, planets, vehicles...).
+
 ● When loading a page, a list of all items on the page should be displayed. For example, the characters page should display a list of all characters in the franchise. Do not present all character information in this list.
+
 ● Use JavaScript and Bootstrap components (such as modal) to display detailed information about an item when clicked in the list.
+
 ● Provide a search field on each page so that the user can search for items by name.
 
 To make data access more efficient and reduce API queries, use localStorage to temporarily store JSON.
+
