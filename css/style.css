@@ -6,7 +6,6 @@ body{
 }
 
 main{
-    
 }
 
 #hero{
@@ -31,7 +30,7 @@ main{
     /* background-color: aqua; */
     position: absolute;
     top: 0;
-    z-index: 50;
+    z-index: 500;
 
     display: flex;
     justify-content: center;
@@ -93,20 +92,80 @@ main{
     justify-content: center;
     flex-direction: column;
     max-width: 150px;
-    background-color:rgba(255, 255, 255, 0);
+    height: 150px;
+    background-color:rgba(253, 253, 253, 0.932);
     border-color: cornsilk;
-    border: 55px;
     border-radius: 3px;
     width: 100%;
+    overflow: hidden;
 }
 .menu-botoes img{
-    max-width: 150px;
-    max-height: 150px;
     width: 100%;
-    height: auto;
+    object-fit: cover;
+    flex: 1;
 }
 
 .carousel-fade .carousel-item {
   transition: opacity 0.8s ease-in-out;
+}
+
+/* PERSONAGENS */
+
+#menu-personagens{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    /* background-color: rgba(255, 0, 157, 0.144); */
+}
+
+#personagens{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#personagens button {
+    display: flex;
+    margin: 7px;
+    max-width: 220px;
+    height: 220px;
+    
+    flex-direction: column;
+    background: none;
+    border: 1px;
+    border-color: rgba(98, 255, 255, 0.815);
+    border-style: solid;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    overflow: hidden; /* evita imagem escapar */
+}
+
+#personagens button:hover {
+    transform: scale(1.04);
+    background-color: rgba(142, 251, 255, 0.342);;
+    border-radius: 0px;
+}
+
+#personagens h3 {
+    background-color: rgba(0, 255, 255, 0);
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    
+    color: rgb(200, 229, 255);
+    background-color: rgba(119, 255, 255, 0.068);
+    flex-shrink: 0; /* impede o título de encolher */
+    font-size: medium;
+    
+}
+
+#personagens img {
+    border-radius: 3px;
+    width: 100%;
+    
+    object-fit: cover;
+    flex: 1;
 }
 
