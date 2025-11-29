@@ -1,60 +1,116 @@
-body{
+body {
     background-color: black;
+    
 }
 
-
-h1, h2, h3, p{
+h1,
+h2,
+h3,
+p {
     color: rgb(255, 255, 255);
 }
 
-#personagem-total{
+#personagem-total {
     margin: 40px;
     margin-top: 10px;
-    
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 5px;
+    gap: 20px;
+}
+
+.h-direita {
+    width: 100%;
+    max-width: 200px;
+
+    
 }
 
 
 
-.header-personagem{
+.header-personagem {
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 350px;
     border: 2px solid rgb(255, 255, 255);
     padding: 7px;
     justify-content: space-between;
     align-items: center;
-    
 }
 
-.header-personagem h3{
-    
+.header-personagem h3 {
     font-size: 50px;
+}
+
+.header-personagem img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
 
 }
 
-.header-personagem img{
-    max-width: 190px;
-    max-height: 190px;
-    height: auto;
-
-    
+.p-dados {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.main-personagem{
+.main-personagem {
     display: flex;
     width: 100%;
     height: 3000px;
     border: 2px solid rgb(255, 255, 255);
     padding: 7px;
     align-items: center;
+    display: inline;
 }
 
-.main-personagem h2{
-    
+.main-personagem h2 {
+    font-size: 30px;
     display: flex;
-    background-color: rgb(112, 112, 112);
+}
+
+.header-main-personagem {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+#filmes-arma {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#img-arma {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+}
+
+#img-arma img {
+    max-width: 200px;
+    max-height: 200px;
+    height: auto;
+}
+
+#filmes {
+    display: flex;
+    width: 280px;
+    flex-direction: row;
+    gap: 2px;
+    flex-wrap: wrap;
+}
+
+#filmes img {
+    max-width: 130px;
+    max-height: 200px;
+    height: auto;
+    width: 100%;
 }
