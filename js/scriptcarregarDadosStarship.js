@@ -22,7 +22,8 @@ function mostrarPersonagemPagina() {
     const fabricanteI = document.querySelector('#fabricante');
     const modeloI = document.querySelector('#modelo')
     const tripulacaoI = document.querySelector('#tripulacao');
-    const passageirosI = document.querySelector('#passageiros')
+    const passageirosI = document.querySelector('#passageiros');
+    const plantaI = document.querySelector('#planta-starship');
 
     const filmesI = document.querySelector('#filmes');
 
@@ -72,6 +73,10 @@ function mostrarPersonagemPagina() {
     const passageiros = document.createElement('p');
     passageiros.innerHTML = personagemClicadoSalvo.passengers;
     passageirosI.appendChild(passageiros);
+
+    const plantImg = document.createElement('img');
+    plantImg.src = `../img/starship/blueprint/${imgSalva}.jpeg`;
+    plantaI.appendChild(plantImg);
 
 
 

@@ -115,3 +115,16 @@ p {
     height: auto;
     width: 100%;
 }
+
+#dados-planta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#planta-starship img{
+    margin-top: 10px;
+    max-width: 500px;
+    max-height: 500px;
+    height: auto;
+}
