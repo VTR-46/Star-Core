@@ -470,6 +470,17 @@ a{
     font-style: normal;
 }
 
-h3{
+h1, h2, h3, h4, h5, h6{
     font-family: 'ScienceGothic';
+    color: rgb(255, 255, 255);
+}
+
+#banner-p1 p{
+    font-family: 'ScienceGothic';
+    color: rgb(255, 255, 255);
+}
+
+.menu-botoes p{
+    font-family: 'ScienceGothic';
+    color: rgb(255, 255, 255);
 }
