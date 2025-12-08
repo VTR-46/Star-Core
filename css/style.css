@@ -1,20 +1,22 @@
-body{
+body {
     display: flex;
     justify-content: center;
     margin: 0;
     overflow-x: hidden;
     background-color: black;
+
 }
 
-main{
-}
+main {}
 
-#hero{
+
+#hero {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
+
 /* .fundo-background{
     width: 100%;
     background-position: absolute;
@@ -28,7 +30,7 @@ main{
 
 
 
-.content{
+.content {
     /* background-color: aqua; */
     position: absolute;
     top: 0;
@@ -39,7 +41,14 @@ main{
     align-self: center;
     text-align: center;
 }
-.banner{
+
+#bord {
+    border: 8px;
+    border-color: aliceblue;
+    margin: 5px;
+}
+
+.banner {
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -50,12 +59,12 @@ main{
     margin-right: auto;
 }
 
-.banner img{
+.banner img {
     width: 100%;
     height: auto;
 }
 
-.banner2{
+.banner2 {
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -65,19 +74,20 @@ main{
     max-width: 8000px;
 }
 
-.banner2 img{
+.banner2 img {
     width: 100%;
     height: auto;
 }
 
-.b2config{
+.b2config {
     display: flex;
     /* background-color: aqua; */
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
-.b2config p{
+
+.b2config p {
     color: rgb(251, 255, 0);
 }
 
@@ -85,75 +95,98 @@ main{
 .menu-botoes {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem linha */
     gap: 5px;
-    padding: 10px; /* Adiciona espaçamento interno */
+    padding: 10px;
+    /* Adiciona espaçamento interno */
 }
 
 .menu-botoes p {
     color: beige;
     margin: 0;
     padding: 5px 0;
-    font-size: 14px; /* Tamanho de fonte adequado para responsividade */
+    font-size: 14px;
+    /* Tamanho de fonte adequado para responsividade */
     text-align: center;
-    flex-shrink: 0; /* Impede que o texto encolha */
+    flex-shrink: 0;
+    /* Impede que o texto encolha */
 }
 
 .menu-botoes a {
     display: block;
     text-decoration: none;
-    flex: 1; /* Permite que os itens cresçam igualmente */
-    min-width: 120px; /* Largura mínima para não ficar muito pequeno */
-    max-width: 150px; /* Mantém a largura máxima original */
+    flex: 1;
+    /* Permite que os itens cresçam igualmente */
+    min-width: 120px;
+    /* Largura mínima para não ficar muito pequeno */
+    max-width: 150px;
+    /* Mantém a largura máxima original */
 }
 
 .menu-botoes button {
     display: flex;
-    justify-content: space-between; /* Distribui espaço entre imagem e texto */
+    justify-content: space-between;
+    /* Distribui espaço entre imagem e texto */
     flex-direction: column;
-    width: 100%; /* Ocupa 100% da largura do link pai */
+    width: 100%;
+    /* Ocupa 100% da largura do link pai */
     height: 150px;
     background-color: rgba(253, 253, 253, 0);
     border-color: rgb(255, 255, 255);
     border-radius: 3px;
     overflow: hidden;
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove paddings padrão */
+    margin: 0;
+    /* Remove margens padrão */
+    padding: 0;
+    /* Remove paddings padrão */
+    border-style: solid;
 }
 
 /* Container do carousel para limitar a altura da imagem */
 .menu-botoes .carousel-container {
-    flex: 1; /* Ocupa o espaço disponível */
+    flex: 1;
+    /* Ocupa o espaço disponível */
     display: flex;
     flex-direction: column;
-    min-height: 0; /* Importante para o flex funcionar corretamente */
+    min-height: 0;
+    /* Importante para o flex funcionar corretamente */
     overflow: hidden;
 }
 
 .menu-botoes .carousel {
-    height: 100%; /* O carousel ocupa 100% do container */
-    min-height: 0; /* Importante para flex */
+    height: 100%;
+    /* O carousel ocupa 100% do container */
+    min-height: 0;
+    /* Importante para flex */
 }
 
 .menu-botoes .carousel-inner {
-    height: 100%; /* O inner também ocupa 100% */
+    height: 100%;
+    /* O inner também ocupa 100% */
 }
 
 .menu-botoes .carousel-item {
-    height: 100%; /* Cada item ocupa 100% da altura */
+    height: 100%;
+    /* Cada item ocupa 100% da altura */
 }
 
 .menu-botoes img {
     width: 100%;
-    height: 100%; /* Altura 100% do item do carousel */
-    object-fit: cover; /* Mantém a proporção e cobre o espaço */
-    object-position: center; /* Centraliza a imagem */
+    height: 100%;
+    /* Altura 100% do item do carousel */
+    object-fit: cover;
+    /* Mantém a proporção e cobre o espaço */
+    object-position: center;
+    /* Centraliza a imagem */
 }
 
 .menu-botoes .text-container {
-    flex-shrink: 0; /* Impede que o container de texto encolha */
+    flex-shrink: 0;
+    /* Impede que o container de texto encolha */
     padding: 5px 0;
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo sutil para melhor legibilidade */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Fundo sutil para melhor legibilidade */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,23 +197,27 @@ main{
 /* Tablets (768px para baixo) */
 @media screen and (max-width: 768px) {
     .menu-botoes {
-        gap: 8px; /* Aumenta um pouco o gap para telas médias */
+        gap: 8px;
+        /* Aumenta um pouco o gap para telas médias */
     }
-    
+
     .menu-botoes a {
-        min-width: 140px; /* Aumenta um pouco a largura mínima */
+        min-width: 140px;
+        /* Aumenta um pouco a largura mínima */
         max-width: 140px;
     }
-    
+
     .menu-botoes button {
-        height: 140px; /* Reduz um pouco a altura */
+        height: 140px;
+        /* Reduz um pouco a altura */
     }
-    
+
     .menu-botoes p {
-        font-size: 13px; /* Reduz um pouco a fonte */
+        font-size: 13px;
+        /* Reduz um pouco a fonte */
         padding: 4px 0;
     }
-    
+
     .menu-botoes .text-container {
         padding: 4px 0;
     }
@@ -190,24 +227,29 @@ main{
 @media screen and (max-width: 480px) {
     .menu-botoes {
         gap: 6px;
-        justify-content: space-around; /* Distribui melhor o espaço */
+        justify-content: space-around;
+        /* Distribui melhor o espaço */
     }
-    
+
     .menu-botoes a {
-        min-width: 110px; /* Reduz a largura mínima */
+        min-width: 110px;
+        /* Reduz a largura mínima */
         max-width: 110px;
-        flex: 0 1 auto; /* Permite que os itens não cresçam igualmente */
+        flex: 0 1 auto;
+        /* Permite que os itens não cresçam igualmente */
     }
-    
+
     .menu-botoes button {
-        height: 120px; /* Reduz mais a altura */
+        height: 120px;
+        /* Reduz mais a altura */
     }
-    
+
     .menu-botoes p {
-        font-size: 12px; /* Reduz mais a fonte */
+        font-size: 12px;
+        /* Reduz mais a fonte */
         padding: 3px 0;
     }
-    
+
     .menu-botoes .text-container {
         padding: 3px 0;
     }
@@ -216,19 +258,21 @@ main{
 /* Celulares muito pequenos (360px para baixo) */
 @media screen and (max-width: 360px) {
     .menu-botoes a {
-        min-width: 90px; /* Reduz ainda mais para telas muito pequenas */
+        min-width: 90px;
+        /* Reduz ainda mais para telas muito pequenas */
         max-width: 90px;
     }
-    
+
     .menu-botoes button {
-        height: 100px; /* Altura ainda menor */
+        height: 100px;
+        /* Altura ainda menor */
     }
-    
+
     .menu-botoes p {
         font-size: 11px;
         padding: 2px 0;
     }
-    
+
     .menu-botoes .text-container {
         padding: 2px 0;
     }
@@ -237,41 +281,44 @@ main{
 /* Telas grandes (acima de 1200px) - Opcional */
 @media screen and (min-width: 1200px) {
     .menu-botoes {
-        gap: 10px; /* Aumenta o espaçamento em telas grandes */
+        gap: 10px;
+        /* Aumenta o espaçamento em telas grandes */
     }
-    
+
     .menu-botoes a {
-        max-width: 160px; /* Aumenta um pouco em telas grandes */
+        max-width: 160px;
+        /* Aumenta um pouco em telas grandes */
     }
-    
+
     .menu-botoes button {
-        height: 160px; /* Aumenta a altura */
+        height: 160px;
+        /* Aumenta a altura */
     }
-    
+
     .menu-botoes p {
         padding: 6px 0;
         font-size: 15px;
     }
-    
+
     .menu-botoes .text-container {
         padding: 6px 0;
     }
 }
 
 .carousel-fade .carousel-item {
-  transition: opacity 0.8s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
 }
 
 /* PERSONAGENS */
 
-#menu-personagens{
+#menu-personagens {
     margin: 50px;
     display: flex;
     justify-content: center;
     /* background-color: rgba(255, 0, 157, 0.144); */
 }
 
-#personagens{
+#personagens {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -283,7 +330,7 @@ main{
     margin: 7px;
     max-width: 220px;
     height: 220px;
-    
+
     flex-direction: column;
     background: none;
     border: 1px;
@@ -292,12 +339,14 @@ main{
     border-radius: 3px;
     cursor: pointer;
     width: 100%;
-    overflow: hidden; /* evita imagem escapar */
+    overflow: hidden;
+    /* evita imagem escapar */
 }
 
 #personagens button:hover {
     transform: scale(1.04);
-    background-color: rgba(252, 252, 252, 0.342);;
+    background-color: rgba(252, 252, 252, 0.342);
+    ;
     border-radius: 0px;
 }
 
@@ -306,20 +355,99 @@ main{
     padding: 0;
     margin: 0;
     bottom: 0;
-    
+
     color: rgb(255, 255, 255);
     background-color: rgba(119, 255, 255, 0.068);
-    flex-shrink: 0; /* impede o título de encolher */
+    flex-shrink: 0;
+    /* impede o título de encolher */
     font-size: medium;
-    
+
 }
 
 #personagens img {
     border-radius: 3px;
     width: 100%;
-    
+
     object-fit: cover;
     flex: 1;
 }
 
 
+#pesquisa input {
+    background-color: rgba(248, 247, 247, 0);
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    color: aliceblue;
+    height: 50px;
+
+}
+
+#pesquisa button {
+    background-color: rgba(210, 105, 30, 0);
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    height: 50px;
+}
+
+#pesquisa ::placeholder {
+    color: rgba(255, 255, 255, 0.856);
+}
+
+.bt-buscar {
+    color: rgb(255, 255, 255);
+}
+
+#busca-resultados {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#busca-resultados button{
+    display: flex;
+    margin: 7px;
+    max-width: 220px;
+    height: 220px;
+
+    flex-direction: column;
+    background: none;
+    border: 1px;
+    border-color: rgba(255, 255, 255, 0.815);
+    border-style: solid;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    overflow: hidden;
+    /* evita imagem escapar */
+}
+
+#busca-resultados button:hover {
+    transform: scale(1.04);
+    background-color: rgba(252, 252, 252, 0.342);
+    ;
+    border-radius: 0px;
+}
+
+#busca-resultados h3 {
+    background-color: rgba(0, 255, 255, 0);
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    background-color: rgba(119, 255, 255, 0.068);
+    flex-shrink: 0;
+    /* impede o título de encolher */
+    font-size: medium;
+
+}
+
+#busca-resultados img {
+    border-radius: 3px;
+    width: 100%;
+
+    object-fit: cover;
+    flex: 1;
+}

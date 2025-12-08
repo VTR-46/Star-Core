@@ -14,7 +14,7 @@ function exibierPeronagem(personagem, i) {
     img.src = cd;
     img.alt = descricaoAlt;
     
-    
+    console.log(nome + " " + i);
     
     button.appendChild(h3)
     button.appendChild(img);
@@ -45,21 +45,30 @@ function exibierPeronagem(personagem, i) {
 async function carregarPersonagens() {
 
         let c = 1;          //Contador para a imagem do personagem
-        for (let i = 1; i <= 9; i++) {
+        for (let i = 1; i <= 10; i++) {
             
             let url = 'https://swapi.dev/api/people/?page='+ i;         //i vai mudar a pagina
             resposta = await fetch(url);
-
-            if (resposta.ok) {
+            
+                if (resposta.ok) {
                 let json = await resposta.json();
                 console.log(json);
                 for (let b = 0; b < 10; b++) {
-                    
-                    exibierPeronagem(json.results[b], c);       
+                if (c != 17) {                  //PROBLEMA DA API NO PERSONAGEM 17
+                    exibierPeronagem(json.results[b], c);   
                     c++;
                     
+                }else{
+                    c = 18;
+                    b--;
+                }    
+                    
+                    
                 }
+
+
             }
+
 
             
         }
@@ -67,11 +76,6 @@ async function carregarPersonagens() {
         
     
 }
-
-function mostrarPersonagem() {
-    console.log('testee');
-}
-
 
 
 window.onload = carregarPersonagens;
