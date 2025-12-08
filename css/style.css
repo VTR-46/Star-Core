@@ -9,7 +9,9 @@ body {
 
 main {}
 
-
+a{
+    text-decoration: none;
+}
 #hero {
     display: flex;
     align-items: center;
@@ -43,9 +45,9 @@ main {}
 }
 
 #bord {
-    border: 8px;
-    border-color: aliceblue;
-    margin: 5px;
+    border: 2px solid white;
+    padding: 120px;
+    border-radius: 5px; /* opcional para cantos arredondados */
 }
 
 .banner {
@@ -323,6 +325,7 @@ main {}
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    text-decoration: none;
 }
 
 #personagens button {
@@ -341,6 +344,7 @@ main {}
     width: 100%;
     overflow: hidden;
     /* evita imagem escapar */
+    text-decoration: none;
 }
 
 #personagens button:hover {
@@ -351,16 +355,15 @@ main {}
 }
 
 #personagens h3 {
-    background-color: rgba(0, 255, 255, 0);
     padding: 0;
     margin: 0;
     bottom: 0;
-
     color: rgb(255, 255, 255);
-    background-color: rgba(119, 255, 255, 0.068);
+    background-color: rgba(250, 250, 250, 0.068);
     flex-shrink: 0;
     /* impede o título de encolher */
     font-size: medium;
+    text-decoration: none;
 
 }
 
