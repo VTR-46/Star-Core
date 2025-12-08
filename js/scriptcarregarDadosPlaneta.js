@@ -15,13 +15,14 @@ function mostrarPersonagemPagina() {
 
 
     const nomeTI = document.querySelector('#nome-titular');
-    const comprimentoI = document.querySelector('#comprimento');
-    const custoI = document.querySelector('#custo');
-    const fabricanteI = document.querySelector('#fabricante');
-    const modeloI = document.querySelector('#modelo')
-    const tripulacaoI = document.querySelector('#tripulacao');
-    const passageirosI = document.querySelector('#passageiros');
-    const plantaI = document.querySelector('#planta-starship');
+    const climaI = document.querySelector('#clima');
+    const diametroI = document.querySelector('#diametro');
+    const terrenoI = document.querySelector('#terreno');
+    const gravidadeI = document.querySelector('#gravidade')
+    const periodoI = document.querySelector('#periodo');
+    const populacaoI = document.querySelector('#populacao');
+
+
 
     const filmesI = document.querySelector('#filmes');
 
@@ -37,35 +38,33 @@ function mostrarPersonagemPagina() {
     headerDireita.appendChild(imagem);
 
     
-    const custo = document.createElement('p');
-    custo.innerHTML = personagemClicadoSalvo.cost_in_credits;
-    custoI.appendChild(custo);
+    const clima = document.createElement('p');
+    clima.innerHTML = personagemClicadoSalvo.climate;
+    climaI.appendChild(clima);
     
-    const fabricante = document.createElement('p');
-    fabricante.innerHTML = personagemClicadoSalvo.manufacturer;
-    fabricanteI.appendChild(fabricante);
+    const terreno = document.createElement('p');
+    terreno.innerHTML = personagemClicadoSalvo.terrain;
+    terrenoI.appendChild(terreno);
 
-    const modelo = document.createElement('p');
-    modelo.innerHTML = personagemClicadoSalvo.model;
-    modeloI.appendChild(modelo);
-
-
-    const comprimento = document.createElement('p');
-    comprimento.innerHTML = personagemClicadoSalvo.length;
-    comprimentoI.appendChild(comprimento);
+    const gravidade = document.createElement('p');
+    gravidade.innerHTML = personagemClicadoSalvo.gravity;
+    gravidadeI.appendChild(gravidade);
 
 
-    const tripulacao = document.createElement('p');
-    tripulacao.innerHTML = personagemClicadoSalvo.crew;
-    tripulacaoI.appendChild(tripulacao);
+    const diametro = document.createElement('p');
+    diametro.innerHTML = personagemClicadoSalvo.diameter;
+    diametroI.appendChild(diametro);
 
-    const passageiros = document.createElement('p');
-    passageiros.innerHTML = personagemClicadoSalvo.passengers;
-    passageirosI.appendChild(passageiros);
 
-    const plantImg = document.createElement('img');
-    plantImg.src = `../img/planets/blueprint/${imgSalva}.jpeg`;
-    plantaI.appendChild(plantImg);
+    const periodo = document.createElement('p');
+    periodo.innerHTML = personagemClicadoSalvo.orbital_period;
+    periodoI.appendChild(periodo);
+
+    const populacao = document.createElement('p');
+    populacao.innerHTML = personagemClicadoSalvo.population;
+    populacaoI.appendChild(populacao);
+
+
 
 
 
