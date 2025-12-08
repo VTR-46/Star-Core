@@ -56,8 +56,6 @@ async function getPersonagem() {
             ca++;
             console.log(ca);
         }
-
-
     }
 }
 
@@ -87,8 +85,122 @@ async function getStarShip() {
             ca++;
             console.log(ca);
         }
+    }
+}
 
+async function getPlaneta() {
+    const inputtxt = document.querySelector('.input-pesquisa');
+    let a = inputtxt.value;
+    let url = 'https://swapi.dev/api/planets/?search=' + a;
+    resposta = await fetch(url);
 
+    if (resposta.ok) {
+        let json = await resposta.json();
+
+        console.log(json);
+
+        ca = 1;
+        for (let b = 0; b < json.count; b++) {
+
+            let urlpg = 'https://swapi.dev/api/planets/?search='+a+'&page='+ ca;
+            respostapg = await fetch(urlpg);
+            let jsonpg = await respostapg.json();
+
+            for (let i = 0; i < json.results.length; i++) {
+                console.log(jsonpg.results[i]);
+                exibierPeronagem(jsonpg.results[i], 'planets');
+            }
+
+            ca++;
+            console.log(ca);
+        }
+    }
+}
+
+async function getVehicles() {
+    const inputtxt = document.querySelector('.input-pesquisa');
+    let a = inputtxt.value;
+    let url = 'https://swapi.dev/api/vehicles/?search=' + a;
+    resposta = await fetch(url);
+
+    if (resposta.ok) {
+        let json = await resposta.json();
+
+        console.log(json);
+
+        ca = 1;
+        for (let b = 0; b < json.count; b++) {
+
+            let urlpg = 'https://swapi.dev/api/vehicles/?search='+a+'&page='+ ca;
+            respostapg = await fetch(urlpg);
+            let jsonpg = await respostapg.json();
+
+            for (let i = 0; i < json.results.length; i++) {
+                console.log(jsonpg.results[i]);
+                exibierPeronagem(jsonpg.results[i], 'vehicles');
+            }
+
+            ca++;
+            console.log(ca);
+        }
+    }
+}
+
+async function getFilmes() {
+    const inputtxt = document.querySelector('.input-pesquisa');
+    let a = inputtxt.value;
+    let url = 'https://swapi.dev/api/films/?search=' + a;
+    resposta = await fetch(url);
+
+    if (resposta.ok) {
+        let json = await resposta.json();
+
+        console.log(json);
+
+        ca = 1;
+        for (let b = 0; b < json.count; b++) {
+
+            let urlpg = 'https://swapi.dev/api/films/?search='+a+'&page='+ ca;
+            respostapg = await fetch(urlpg);
+            let jsonpg = await respostapg.json();
+
+            for (let i = 0; i < json.results.length; i++) {
+                console.log(jsonpg.results[i]);
+                exibierPeronagem(jsonpg.results[i], 'films');
+            }
+
+            ca++;
+            console.log(ca);
+        }
+    }
+}
+
+async function getSpecies() {
+    const inputtxt = document.querySelector('.input-pesquisa');
+    let a = inputtxt.value;
+    let url = 'https://swapi.dev/api/species/?search=' + a;
+    resposta = await fetch(url);
+
+    if (resposta.ok) {
+        let json = await resposta.json();
+
+        console.log(json);
+
+        ca = 1;
+        for (let b = 0; b < json.count; b++) {
+
+            let urlpg = 'https://swapi.dev/api/species/?search='+a+'&page='+ ca;
+            respostapg = await fetch(urlpg);
+            let jsonpg = await respostapg.json();
+
+            for (let i = 0; i < json.results.length; i++) {
+                console.log(jsonpg.results[i]);
+                exibierPeronagem(jsonpg.results[i], 'species');
+            }
+
+            ca++;
+            console.log(ca);
+        }
     }
 }
 
@@ -97,3 +209,7 @@ const btpesquisa = document.querySelector('.bt-buscar');
 
 btpesquisa.addEventListener("click", getPersonagem);
 btpesquisa.addEventListener("click", getStarShip);
+btpesquisa.addEventListener("click", getPlaneta);
+btpesquisa.addEventListener("click", getVehicles);
+btpesquisa.addEventListener("click", getFilmes);
+btpesquisa.addEventListener("click", getSpecies);
