@@ -67,30 +67,30 @@ function mostrarPersonagemPagina() {
     filmesI.appendChild(filmes);
     console.log(personagemClicadoSalvo.films[1]);
 
-    
+
 
     for (let i = 0; i <= personagemClicadoSalvo.films.length; i++) {
-        const filmeImg = document.createElement('img');            
-        
+        const filmeImg = document.createElement('img');
+
         if (i == 1) {
-            filmeImg.src = '../img/films/1.jpeg'    
+            filmeImg.src = '../img/films/1.jpeg'
         }
         if (i == 2) {
-            filmeImg.src = '../img/films/2.jpeg'        
+            filmeImg.src = '../img/films/2.jpeg'
         }
         if (i == 3) {
-            filmeImg.src = '../img/films/3.jpeg'        
+            filmeImg.src = '../img/films/3.jpeg'
         }
         if (i == 4) {
-            filmeImg.src = '../img/films/4.jpeg'        
+            filmeImg.src = '../img/films/4.jpeg'
         }
         if (i == 5) {
-            filmeImg.src = '../img/films/5.jpeg'        
+            filmeImg.src = '../img/films/5.jpeg'
         }
         if (i == 6) {
-            filmeImg.src = '../img/films/6.jpeg'        
+            filmeImg.src = '../img/films/6.jpeg'
         }
-        
+
         filmesI.appendChild(filmeImg);
 
 
@@ -102,7 +102,7 @@ function mostrarPersonagemPagina() {
     const txt = document.createElement('p');
 
     if (imgSalva == 1) {
-            
+
         txt.innerHTML = 'Luke Skywalker é o protagonista da trilogia original de Star Wars e um dos maiores heróis da galáxia. Filho de Anakin Skywalker (Darth Vader) e Padmé Amidala, ele começa como um jovem fazendeiro em Tatooine e se torna um poderoso Jedi. Luke luta contra o Império Galáctico, enfrenta desafios pessoais e, no final, consegue salvar seu pai do Lado Sombrio da Força, ajudando a derrotar o Imperador Palpatine e restaurar a paz na galáxia.';
         const arma1 = document.createElement('img');
         const arma1T = document.createElement('p');
@@ -132,17 +132,63 @@ function mostrarPersonagemPagina() {
         armaI.appendChild(arma3T);
         armaI.appendChild(arma3);
 
-        
-
-
     }
-    if (imgSalva == 3) {
-            
-        txt.innerHTML = 'Robo bala';
-        }
+    if (imgSalva == 4) {
+
+        txt.innerHTML = 'Darth Vader já foi o heroico Cavaleiro Jedi Anakin Skywalker, um indivíduo com aptidão natural para a Força e potencial ilimitado. Ele foi treinado por Obi-Wan Kenobi, mas acabou sendo seduzido pelo lado sombrio da Força, tornando-se um Lorde Sith a serviço do Imperador Palpatine.';
+        const arma1 = document.createElement('img');
+        const arma1T = document.createElement('p');
+        const h2T = document.createElement('h2');
+
+        h2T.innerHTML = 'ARMAS'
+        arma1T.innerHTML = 'Darth Vader red lightsaber'
+
+        textoI.appendChild(txt);
+
+        armaI.appendChild(h2T);
+        arma1.src = '../img/weapons/VaderSabre.jpeg'
+
+        armaI.appendChild(arma1T);
+        armaI.appendChild(arma1);
+
+    } if (imgSalva == 10) {
+        txt.innerHTML = 'Obi-Wan Kenobi é um lendário Mestre Jedi da saga Star Wars, conhecido por ser um sábio mentor que treinou Anakin Skywalker (que se tornou Darth Vader) e, posteriormente, Luke Skywalker, guiando-os nos caminhos da Força e sendo fundamental na luta contra o Império. ';
+        const arma1 = document.createElement('img');
+        const arma1T = document.createElement('p');
+        const h2T = document.createElement('h2');
+
+        h2T.innerHTML = 'ARMAS'
+        arma1T.innerHTML = 'Obi-Wan blue lightsaber'
+
+        textoI.appendChild(txt);
+
+        armaI.appendChild(h2T);
+        arma1.src = '../img/weapons/obiSabre.jpeg'
+
+        armaI.appendChild(arma1T);
+        armaI.appendChild(arma1);
+    }
+
+if (imgSalva == 11) {
+    txt.innerHTML = 'Anakin Skywalker é um dos personagens mais icônicos de Star Wars, um humano sensível à Força, nascido escravo em Tatooine, que se tornou um poderoso Cavaleiro Jedi, foi considerado o "Escolhido" para trazer equilíbrio à Força, mas sucumbiu ao Lado Sombrio para se tornar o temido Lorde Sith Darth Vader, o vilão central da trilogia original, e pai de Luke Skywalker e Leia Organa, redimindo-se no fim para salvar seu filho, resultando em sua morte e retorno à Luz como um com a Força. ';
+    const arma1 = document.createElement('img');
+    const arma1T = document.createElement('p');
+    const h2T = document.createElement('h2');
+
+    h2T.innerHTML = 'ARMAS'
+    arma1T.innerHTML = 'Anakin Skywalker"s" blue lightsaber'
+
+    textoI.appendChild(txt);
+
+    armaI.appendChild(h2T);
+    arma1.src = '../img/weapons/ANAKINBLUE.jpeg'
+
+    armaI.appendChild(arma1T);
+    armaI.appendChild(arma1);
+}
 
 
-    
+
 }
 
 
