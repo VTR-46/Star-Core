@@ -318,6 +318,9 @@ a{
     display: flex;
     justify-content: center;
     /* background-color: rgba(255, 0, 157, 0.144); */
+        border-width: 5px;
+    border-color: aliceblue;
+    padding: 5px;
 }
 
 #personagens {
@@ -326,6 +329,11 @@ a{
     flex-direction: row;
     flex-wrap: wrap;
     text-decoration: none;
+    border: 1px solid white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 #personagens button {
@@ -453,4 +461,15 @@ a{
 
     object-fit: cover;
     flex: 1;
+}
+
+@font-face {
+    font-family: 'ScienceGothic';
+    src: url('../fonts/ScienceGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h3{
+    font-family: 'ScienceGothic';
 }

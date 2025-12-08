@@ -129,3 +129,14 @@ p {
     height: auto;
 }
 
+
+@font-face {
+    font-family: 'ScienceGothic';
+    src: url('../fonts/ScienceGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'ScienceGothic';
+}
