@@ -2,7 +2,14 @@
 function exibierPeronagem(personagem, id) {
     const div = document.querySelector('#busca-resultados');
     //console.log('foi');
-    let nome = personagem.name;
+
+    let nome;                       //DIFERENCIAR FILMES DO RESTANTE 
+    if (id == 'films') {
+        nome = personagem.title;
+    }else{
+        nome = personagem.name;
+    }
+    
 
     let button = document.createElement('button');
     let h3 = document.createElement('h3');
@@ -11,19 +18,22 @@ function exibierPeronagem(personagem, id) {
     const url = personagem.url;
     console.log(url);
 
-    const mat = '/\d+/';
+    const mat = /\d+/;
     const imgID = url.match(mat);
     console.log("img id" + imgID);
     let img = document.createElement('img');
-    let cd = '../img/'
+    let cd = '../img/busca/'+id+'/'+imgID+'.jpeg';
+    img.src = cd;
 
     button.appendChild(h3)
+    button.appendChild(img);
 
 
     div.appendChild(button);
 
     button.addEventListener("click", function (e) {
         console.log('teste');
+        console.log(personagem);
 
         const dadosPersonagem = personagem;
         localStorage.setItem('dadosPersonagemClicado', JSON.stringify(dadosPersonagem));
