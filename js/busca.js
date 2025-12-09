@@ -8,7 +8,14 @@ function exibierPeronagem(personagem, id) {
     let h3 = document.createElement('h3');
     h3.innerHTML = `${nome}`;
 
+    const url = personagem.url;
+    console.log(url);
 
+    const mat = '/\d+/';
+    const imgID = url.match(mat);
+    console.log("img id" + imgID);
+    let img = document.createElement('img');
+    let cd = '../img/'
 
     button.appendChild(h3)
 
@@ -206,10 +213,21 @@ async function getSpecies() {
 
 
 const btpesquisa = document.querySelector('.bt-buscar');
+let btP = document.querySelector('#option1');
+let btV = document.querySelector('#option2');
+let btN = document.querySelector('#option3');
+let btPL = document.querySelector('#option4');
+let btE = document.querySelector('#option5');
+let btF = document.querySelector('#option6');
 
-btpesquisa.addEventListener("click", getPersonagem);
-btpesquisa.addEventListener("click", getStarShip);
-btpesquisa.addEventListener("click", getPlaneta);
-btpesquisa.addEventListener("click", getVehicles);
-btpesquisa.addEventListener("click", getFilmes);
-btpesquisa.addEventListener("click", getSpecies);
+btP.addEventListener("click", getPersonagem);
+btV.addEventListener("click", getVehicles);
+btN.addEventListener("click", getStarShip);
+btPL.addEventListener("click", getPlaneta);
+btE.addEventListener("click", getSpecies);
+btF.addEventListener("click", getFilmes);
+
+
+
+
+

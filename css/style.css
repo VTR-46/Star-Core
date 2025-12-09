@@ -402,6 +402,14 @@ a{
     height: 50px;
 }
 
+#pesquisa label {
+    background-color: rgba(210, 105, 30, 0);
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    height: 50px;
+}
+
 #pesquisa ::placeholder {
     color: rgba(255, 255, 255, 0.856);
 }
