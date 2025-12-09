@@ -1,6 +1,7 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima igual à viewport */
     margin: 0;
     overflow-x: hidden;
     background-color: black;
@@ -33,15 +34,35 @@ a{
 
 
 .content {
-    /* background-color: aqua; */
-    position: absolute;
-    top: 0;
-    z-index: 500;
-
+    flex: 1; /* Ocupa todo o espaço disponível */
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-self: center;
+    align-items: center;
     text-align: center;
+    width: 100%;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: auto; /* Empurra para baixo */
+}
+
+footer p {
+    color: white;
+    margin: 0;
+}
+
+footer a {
+    color: #ffe81f; /* Cor amarela Star Wars */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 #bord {
