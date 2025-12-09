@@ -6,10 +6,10 @@ function exibierPeronagem(personagem, id) {
     let nome;                       //DIFERENCIAR FILMES DO RESTANTE 
     if (id == 'films') {
         nome = personagem.title;
-    }else{
+    } else {
         nome = personagem.name;
     }
-    
+
 
     let button = document.createElement('button');
     let h3 = document.createElement('h3');
@@ -22,7 +22,7 @@ function exibierPeronagem(personagem, id) {
     const imgID = url.match(mat);
     console.log("img id" + imgID);
     let img = document.createElement('img');
-    let cd = '../img/busca/'+id+'/'+imgID+'.jpeg';
+    let cd = '../img/busca/' + id + '/' + imgID + '.jpeg';
     img.src = cd;
 
     button.appendChild(h3)
@@ -37,10 +37,28 @@ function exibierPeronagem(personagem, id) {
 
         const dadosPersonagem = personagem;
         localStorage.setItem('dadosPersonagemClicado', JSON.stringify(dadosPersonagem));
-        localStorage.setItem('imgPersonagemClicado', i);
+        localStorage.setItem('imgPersonagemClicado', imgID);
 
         const personagemClicadoSalvo = JSON.parse(localStorage.getItem('dadosPersonagemClicado'));
         console.log(personagemClicadoSalvo);
+        if (id == 'people') {
+            window.location.href = '../html/paginaPersonagem.html'
+        }
+        if (id == 'starship') {
+            window.location.href = '../html/paginaStarship.html'
+        }
+        if (id == 'vehicles') {
+            window.location.href = '../html/paginaVeiculos.html'
+        }
+        if (id == 'planets') {
+            window.location.href = '../html/paginaPlaneta.html'
+        }
+        if (id == 'species') {
+            window.location.href = '../html/paginaEspecies.html'
+        }
+        if (id == 'films') {
+            window.location.href = '../html/paginaFilme.html'
+        }
 
     });
 
@@ -61,7 +79,7 @@ async function getPersonagem() {
         ca = 1;
         for (let b = 0; b < json.count; b++) {
 
-            let urlpg = 'https://swapi.dev/api/people/?search='+a+'&page='+ ca;
+            let urlpg = 'https://swapi.dev/api/people/?search=' + a + '&page=' + ca;
             respostapg = await fetch(urlpg);
             let jsonpg = await respostapg.json();
 
@@ -90,7 +108,7 @@ async function getStarShip() {
         ca = 1;
         for (let b = 0; b < json.count; b++) {
 
-            let urlpg = 'https://swapi.dev/api/starships/?search='+a+'&page='+ ca;
+            let urlpg = 'https://swapi.dev/api/starships/?search=' + a + '&page=' + ca;
             respostapg = await fetch(urlpg);
             let jsonpg = await respostapg.json();
 
@@ -119,7 +137,7 @@ async function getPlaneta() {
         ca = 1;
         for (let b = 0; b < json.count; b++) {
 
-            let urlpg = 'https://swapi.dev/api/planets/?search='+a+'&page='+ ca;
+            let urlpg = 'https://swapi.dev/api/planets/?search=' + a + '&page=' + ca;
             respostapg = await fetch(urlpg);
             let jsonpg = await respostapg.json();
 
@@ -148,7 +166,7 @@ async function getVehicles() {
         ca = 1;
         for (let b = 0; b < json.count; b++) {
 
-            let urlpg = 'https://swapi.dev/api/vehicles/?search='+a+'&page='+ ca;
+            let urlpg = 'https://swapi.dev/api/vehicles/?search=' + a + '&page=' + ca;
             respostapg = await fetch(urlpg);
             let jsonpg = await respostapg.json();
 
@@ -177,7 +195,7 @@ async function getFilmes() {
         ca = 1;
         for (let b = 0; b < json.count; b++) {
 
-            let urlpg = 'https://swapi.dev/api/films/?search='+a+'&page='+ ca;
+            let urlpg = 'https://swapi.dev/api/films/?search=' + a + '&page=' + ca;
             respostapg = await fetch(urlpg);
             let jsonpg = await respostapg.json();
 
@@ -206,7 +224,7 @@ async function getSpecies() {
         ca = 1;
         for (let b = 0; b < json.count; b++) {
 
-            let urlpg = 'https://swapi.dev/api/species/?search='+a+'&page='+ ca;
+            let urlpg = 'https://swapi.dev/api/species/?search=' + a + '&page=' + ca;
             respostapg = await fetch(urlpg);
             let jsonpg = await respostapg.json();
 
