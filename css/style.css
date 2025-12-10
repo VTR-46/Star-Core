@@ -221,117 +221,68 @@ footer a:hover {
     justify-content: center;
 }
 
-/* Media Queries para Responsividade */
+
 
 /* Tablets (768px para baixo) */
+/* MEDIA QUERIES ESPECÍFICAS */
 @media screen and (max-width: 768px) {
+    #bord {
+        padding: clamp(2rem, 5vw, 3rem);
+    }
+    
     .menu-botoes {
-        gap: 8px;
-        /* Aumenta um pouco o gap para telas médias */
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.5rem;
     }
-
-    .menu-botoes a {
-        min-width: 140px;
-        /* Aumenta um pouco a largura mínima */
-        max-width: 140px;
-    }
-
-    .menu-botoes button {
-        height: 140px;
-        /* Reduz um pouco a altura */
-    }
-
-    .menu-botoes p {
-        font-size: 13px;
-        /* Reduz um pouco a fonte */
-        padding: 4px 0;
-    }
-
-    .menu-botoes .text-container {
-        padding: 4px 0;
+    
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
     }
 }
 
-/* Celulares (480px para baixo) */
 @media screen and (max-width: 480px) {
+    #bord {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+    
     .menu-botoes {
-        gap: 6px;
-        justify-content: space-around;
-        /* Distribui melhor o espaço */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
     }
-
-    .menu-botoes a {
-        min-width: 110px;
-        /* Reduz a largura mínima */
-        max-width: 110px;
-        flex: 0 1 auto;
-        /* Permite que os itens não cresçam igualmente */
+    
+    #personagens button {
+        max-width: 100%;
+        margin: 0.25rem;
     }
-
-    .menu-botoes button {
-        height: 120px;
-        /* Reduz mais a altura */
-    }
-
-    .menu-botoes p {
-        font-size: 12px;
-        /* Reduz mais a fonte */
-        padding: 3px 0;
-    }
-
-    .menu-botoes .text-container {
-        padding: 3px 0;
+    
+    /* Ajuste para navbar em telas muito pequenas */
+    .offcanvas-body {
+        padding: 1rem 0.5rem;
     }
 }
 
-/* Celulares muito pequenos (360px para baixo) */
 @media screen and (max-width: 360px) {
-    .menu-botoes a {
-        min-width: 90px;
-        /* Reduz ainda mais para telas muito pequenas */
-        max-width: 90px;
+    .menu-botoes {
+        grid-template-columns: 1fr;
+        max-width: 250px;
     }
-
-    .menu-botoes button {
-        height: 100px;
-        /* Altura ainda menor */
-    }
-
-    .menu-botoes p {
-        font-size: 11px;
-        padding: 2px 0;
-    }
-
-    .menu-botoes .text-container {
-        padding: 2px 0;
+    
+    #banner-p1 h1 {
+        font-size: 2rem;
     }
 }
 
-/* Telas grandes (acima de 1200px) - Opcional */
-@media screen and (min-width: 1200px) {
-    .menu-botoes {
-        gap: 10px;
-        /* Aumenta o espaçamento em telas grandes */
-    }
+/* Ajuste para evitar overflow horizontal */
+* {
+    max-width: 100%;
+}
 
-    .menu-botoes a {
-        max-width: 160px;
-        /* Aumenta um pouco em telas grandes */
-    }
-
-    .menu-botoes button {
-        height: 160px;
-        /* Aumenta a altura */
-    }
-
-    .menu-botoes p {
-        padding: 6px 0;
-        font-size: 15px;
-    }
-
-    .menu-botoes .text-container {
-        padding: 6px 0;
-    }
+/* Garantir que imagens sejam responsivas */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .carousel-fade .carousel-item {
