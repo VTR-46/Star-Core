@@ -57,44 +57,12 @@ function mostrarPersonagemPagina() {
     corPeleI.appendChild(pele);
 
 
-
-    //dados
-    const filmesTxt = document.createElement('h3');
-    filmesTxt.innerHTML = '';
-    const filmes = document.createElement('img')
-    filmes.innerHTML = personagemClicadoSalvo.films;
-    filmesI.appendChild(filmesTxt);
-    filmesI.appendChild(filmes);
-    console.log(personagemClicadoSalvo.films[1]);
-
-
-
-    for (let i = 0; i <= personagemClicadoSalvo.films.length; i++) {
+    for (let i = 0; i < personagemClicadoSalvo.films.length; i++) {
         const filmeImg = document.createElement('img');
-
-        if (i == 1) {
-            filmeImg.src = '../img/films/1.jpeg'
-        }
-        if (i == 2) {
-            filmeImg.src = '../img/films/2.jpeg'
-        }
-        if (i == 3) {
-            filmeImg.src = '../img/films/3.jpeg'
-        }
-        if (i == 4) {
-            filmeImg.src = '../img/films/4.jpeg'
-        }
-        if (i == 5) {
-            filmeImg.src = '../img/films/5.jpeg'
-        }
-        if (i == 6) {
-            filmeImg.src = '../img/films/6.jpeg'
-        }
-
+        const mat = /\d+/;
+        const imgID = personagemClicadoSalvo.films[i].match(mat);
+        filmeImg.src = '../img/films/' + imgID + '.jpeg';
         filmesI.appendChild(filmeImg);
-
-
-
     }
 
 
@@ -169,23 +137,23 @@ function mostrarPersonagemPagina() {
         armaI.appendChild(arma1);
     }
 
-if (imgSalva == 11) {
-    txt.innerHTML = 'Anakin Skywalker é um dos personagens mais icônicos de Star Wars, um humano sensível à Força, nascido escravo em Tatooine, que se tornou um poderoso Cavaleiro Jedi, foi considerado o "Escolhido" para trazer equilíbrio à Força, mas sucumbiu ao Lado Sombrio para se tornar o temido Lorde Sith Darth Vader, o vilão central da trilogia original, e pai de Luke Skywalker e Leia Organa, redimindo-se no fim para salvar seu filho, resultando em sua morte e retorno à Luz como um com a Força. ';
-    const arma1 = document.createElement('img');
-    const arma1T = document.createElement('p');
-    const h2T = document.createElement('h2');
+    if (imgSalva == 11) {
+        txt.innerHTML = 'Anakin Skywalker é um dos personagens mais icônicos de Star Wars, um humano sensível à Força, nascido escravo em Tatooine, que se tornou um poderoso Cavaleiro Jedi, foi considerado o "Escolhido" para trazer equilíbrio à Força, mas sucumbiu ao Lado Sombrio para se tornar o temido Lorde Sith Darth Vader, o vilão central da trilogia original, e pai de Luke Skywalker e Leia Organa, redimindo-se no fim para salvar seu filho, resultando em sua morte e retorno à Luz como um com a Força. ';
+        const arma1 = document.createElement('img');
+        const arma1T = document.createElement('p');
+        const h2T = document.createElement('h2');
 
-    h2T.innerHTML = 'ARMAS'
-    arma1T.innerHTML = 'Anakin Skywalker"s" blue lightsaber'
+        h2T.innerHTML = 'ARMAS'
+        arma1T.innerHTML = 'Anakin Skywalker"s" blue lightsaber'
 
-    textoI.appendChild(txt);
+        textoI.appendChild(txt);
 
-    armaI.appendChild(h2T);
-    arma1.src = '../img/weapons/ANAKINBLUE.jpeg'
+        armaI.appendChild(h2T);
+        arma1.src = '../img/weapons/ANAKINBLUE.jpeg'
 
-    armaI.appendChild(arma1T);
-    armaI.appendChild(arma1);
-}
+        armaI.appendChild(arma1T);
+        armaI.appendChild(arma1);
+    }
 
 
 

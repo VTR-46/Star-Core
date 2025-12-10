@@ -42,7 +42,7 @@ function mostrarPersonagemPagina() {
     classe.innerHTML = personagemClicadoSalvo.starship_class;
     claseI.appendChild(classe);
 
-    
+
     const custo = document.createElement('p');
     custo.innerHTML = personagemClicadoSalvo.cost_in_credits;
     custoI.appendChild(custo);
@@ -51,7 +51,7 @@ function mostrarPersonagemPagina() {
     mglt.innerHTML = personagemClicadoSalvo.MGLT;
     mgltI.appendChild(mglt);
 
-    
+
     const fabricante = document.createElement('p');
     fabricante.innerHTML = personagemClicadoSalvo.manufacturer;
     fabricanteI.appendChild(fabricante);
@@ -79,52 +79,19 @@ function mostrarPersonagemPagina() {
     plantaI.appendChild(plantImg);
 
 
-
-
-    //dados
-    const filmesTxt = document.createElement('h3');
-    //filmesTxt.innerHTML = '';
-    const filmes = document.createElement('img')
-    filmes.innerHTML = personagemClicadoSalvo.films;
-    filmesI.appendChild(filmesTxt);
-    filmesI.appendChild(filmes);
-    console.log(personagemClicadoSalvo.films[1]);
-
-    
-
-    for (let i = 0; i <= personagemClicadoSalvo.films.length; i++) {
-        const filmeImg = document.createElement('img');            
-        
-        if (i == 1) {
-            filmeImg.src = '../img/films/1.jpeg'    
-        }
-        if (i == 2) {
-            filmeImg.src = '../img/films/2.jpeg'        
-        }
-        if (i == 3) {
-            filmeImg.src = '../img/films/3.jpeg'        
-        }
-        if (i == 4) {
-            filmeImg.src = '../img/films/4.jpeg'        
-        }
-        if (i == 5) {
-            filmeImg.src = '../img/films/5.jpeg'        
-        }
-        if (i == 6) {
-            filmeImg.src = '../img/films/6.jpeg'        
-        }
-        
+    for (let i = 0; i < personagemClicadoSalvo.films.length; i++) {
+        const filmeImg = document.createElement('img');
+        const mat = /\d+/;
+        const imgID = personagemClicadoSalvo.films[i].match(mat);
+        filmeImg.src = '../img/films/' + imgID + '.jpeg';
         filmesI.appendChild(filmeImg);
-
-
-
     }
 
 
 
 
 
-    
+
 }
 
 
