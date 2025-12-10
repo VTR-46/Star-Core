@@ -1,7 +1,8 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Altura mínima igual à viewport */
+    min-height: 100vh;
+    /* Altura mínima igual à viewport */
     margin: 0;
     overflow-x: hidden;
     background-color: black;
@@ -10,9 +11,10 @@ body {
 
 main {}
 
-a{
+a {
     text-decoration: none;
 }
+
 #hero {
     display: flex;
     align-items: center;
@@ -34,7 +36,8 @@ a{
 
 
 .content {
-    flex: 1; /* Ocupa todo o espaço disponível */
+    flex: 1;
+    /* Ocupa todo o espaço disponível */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +51,8 @@ footer {
     padding: 20px;
     width: 100%;
     text-align: center;
-    margin-top: auto; /* Empurra para baixo */
+    margin-top: auto;
+    /* Empurra para baixo */
 }
 
 footer p {
@@ -57,7 +61,8 @@ footer p {
 }
 
 footer a {
-    color: #ffe81f; /* Cor amarela Star Wars */
+    color: #ffe81f;
+    /* Cor amarela Star Wars */
     text-decoration: none;
 }
 
@@ -68,7 +73,8 @@ footer a:hover {
 #bord {
     border: 2px solid white;
     padding: 120px;
-    border-radius: 5px; /* opcional para cantos arredondados */
+    border-radius: 5px;
+    /* opcional para cantos arredondados */
 }
 
 .banner {
@@ -339,7 +345,7 @@ footer a:hover {
     display: flex;
     justify-content: center;
     /* background-color: rgba(255, 0, 157, 0.144); */
-        border-width: 5px;
+    border-width: 5px;
     border-color: aliceblue;
     padding: 5px;
 }
@@ -444,9 +450,14 @@ footer a:hover {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    border: 1px solid white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 0px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-#busca-resultados button{
+#busca-resultados button {
     display: flex;
     margin: 7px;
     max-width: 220px;
@@ -499,17 +510,23 @@ footer a:hover {
     font-style: normal;
 }
 
-p, h1, h2, h3, h4, h5, h6{
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'ScienceGothic';
     color: rgb(255, 255, 255);
 }
 
-#banner-p1 p{
+#banner-p1 p {
     font-family: 'ScienceGothic';
     color: rgb(255, 255, 255);
 }
 
-.menu-botoes p{
+.menu-botoes p {
     font-family: 'ScienceGothic';
     color: rgb(255, 255, 255);
 }
