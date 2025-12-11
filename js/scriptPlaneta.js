@@ -8,14 +8,14 @@ function exibierPeronagem(starship, i) {
     h3.innerHTML = `${nome}`;
 
     let img = document.createElement('img');
-    let cd = '../img/planets/'+i+'.jpeg';
-    let descricaoAlt = 'Imagem do Personagem '+ nome;       //texto do alt da imagem
+    let cd = '../img/planets/' + i + '.jpeg';
+    let descricaoAlt = 'Imagem do Personagem ' + nome;       //texto do alt da imagem
 
     img.src = cd;
     img.alt = descricaoAlt;
-    
+
     console.log(nome);
-    
+
     button.appendChild(h3)
     button.appendChild(img);
 
@@ -39,33 +39,46 @@ function exibierPeronagem(starship, i) {
 
     });
 
-    
+
 }
 
 async function carregarPersonagens() {
+    let c = 1;
 
-        let c = 1;          //Contador para a imagem do personagem
-        for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 6; i++) {
+        let nomeChave = 'planetas_pag_' + i;
+
+
+        let listaDePlanetas;
+
+        // 1. VERIFICA: Já tenho essa página salva
+        if (localStorage.getItem(nomeChave)) {
             
-            let url = 'https://swapi.dev/api/planets/?page=' + i;         //i vai mudar a pagina
-            resposta = await fetch(url);
+            listaDePlanetas = JSON.parse(localStorage.getItem(nomeChave));
+        }
+        else {
+            // 2. SE NÃO TEM: Busca na Internet
+            
+            let url = 'https://swapi.dev/api/planets/?page=' + i;
+            let resposta = await fetch(url);
 
             if (resposta.ok) {
                 let json = await resposta.json();
-                console.log(json);
-                for (let b = 0; b < 10; b++) {
-                    
-                    exibierPeronagem(json.results[b], c);       
-                    c++;
-                    
-                }
-            }
+                listaDePlanetas = json.results; // Pega só a lista de planetas
 
-            
+                // Salva agora para usar na próxima vez
+                localStorage.setItem(nomeChave, JSON.stringify(listaDePlanetas));
+            }
         }
 
-        
-    
+        // 3. EXIBE (Essa parte roda independente de onde veio os dados)
+        if (listaDePlanetas) {
+            for (let b = 0; b < listaDePlanetas.length; b++) {
+                exibierPeronagem(listaDePlanetas[b], c);
+                c++;
+            }
+        }
+    }
 }
 
 function mostrarPersonagem() {

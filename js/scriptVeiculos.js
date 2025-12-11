@@ -43,29 +43,42 @@ function exibierPeronagem(starship, i) {
 }
 
 async function carregarPersonagens() {
+    let c = 1;
 
-        let c = 1;          //Contador para a imagem do personagem
-        for (let i = 1; i <= 4; i++) {
+    for (let i = 1; i <= 4; i++) {
+        let nomeChave = 'veiculos_pag' + i;
+
+
+        let listaDeVE;
+
+        // 1. VERIFICA: Já tenho essa página salva
+        if (localStorage.getItem(nomeChave)) {
             
-            let url = 'https://swapi.dev/api/vehicles/?page=' + i;         //i vai mudar a pagina
-            resposta = await fetch(url);
+            listaDeVE = JSON.parse(localStorage.getItem(nomeChave));
+        }
+        else {
+            // 2. SE NÃO TEM: Busca na Internet
+            
+            let url = 'https://swapi.dev/api/vehicles/?page=' + i;
+            let resposta = await fetch(url);
 
             if (resposta.ok) {
                 let json = await resposta.json();
-                console.log(json);
-                for (let b = 0; b < 10; b++) {
-                    
-                    exibierPeronagem(json.results[b], c);       
-                    c++;
-                    
-                }
-            }
+                listaDeVE = json.results; // Pega só a lista de planetas
 
-            
+                // Salva agora para usar na próxima vez
+                localStorage.setItem(nomeChave, JSON.stringify(listaDeVE));
+            }
         }
 
-        
-    
+        // 3. EXIBE (Essa parte roda independente de onde veio os dados)
+        if (listaDeVE) {
+            for (let b = 0; b < listaDeVE.length; b++) {
+                exibierPeronagem(listaDeVE[b], c);
+                c++;
+            }
+        }
+    }
 }
 
 function mostrarPersonagem() {

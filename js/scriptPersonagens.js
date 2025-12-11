@@ -43,39 +43,44 @@ function exibierPeronagem(personagem, i) {
 }
 
 async function carregarPersonagens() {
+    let c = 1;
 
-        let c = 1;          //Contador para a imagem do personagem
-        for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 9; i++) {
+        let nomeChave = 'personagem_pag' + i;
+
+
+        let listaDePE;
+
+        // 1. VERIFICA: Já tenho essa página salva
+        if (localStorage.getItem(nomeChave)) {
             
-            let url = 'https://swapi.dev/api/people/?page='+ i;         //i vai mudar a pagina
-            resposta = await fetch(url);
+            listaDePE = JSON.parse(localStorage.getItem(nomeChave));
+        }
+        else {
+            // 2. SE NÃO TEM: Busca na Internet
             
-                if (resposta.ok) {
+            let url = 'https://swapi.dev/api/people/?page=' + i;
+            let resposta = await fetch(url);
+
+            if (resposta.ok) {
                 let json = await resposta.json();
-                console.log(json);
-                for (let b = 0; b < 10; b++) {
-                if (c != 17) {                  //PROBLEMA DA API NO PERSONAGEM 17
-                    exibierPeronagem(json.results[b], c);   
-                    c++;
-                    
-                }else{
-                    c = 18;
-                    b--;
-                }    
-                    
-                    
-                }
+                listaDePE = json.results; // Pega só a lista de planetas
 
-
+                // Salva agora para usar na próxima vez
+                localStorage.setItem(nomeChave, JSON.stringify(listaDePE));
             }
-
-
-            
         }
 
-        
-    
+        // 3. EXIBE (Essa parte roda independente de onde veio os dados)
+        if (listaDePE) {
+            for (let b = 0; b < listaDePE.length; b++) {
+                exibierPeronagem(listaDePE[b], c);
+                c++;
+            }
+        }
+    }
 }
+
 
 
 window.onload = carregarPersonagens;
